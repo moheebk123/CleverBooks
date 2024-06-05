@@ -1,0 +1,140 @@
+footer {
+  background-color: #000;
+  width: 100vw;
+  padding: 5em 1em;
+
+  & .container {
+    padding: 1em;
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+
+    & .logo-link-container {
+      display: flex;
+      gap: 2em;
+
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+      }
+
+      & .logo-container {
+        width: 490px;
+        padding: 1em;
+
+        @media screen and (max-width: 930px) {
+          width: 360px;
+        }
+
+        & .logo-box {
+          display: flex;
+          gap: 1em;
+          margin-bottom: 2em;
+
+          & h1 {
+            color: #fff;
+          }
+        }
+
+        & .about {
+          color: #ccc;
+          font-size: 15px;
+
+          @media screen and (max-width: 930px) {
+            display: none;
+          }
+        }
+      }
+
+      & .link-container {
+        display: flex;
+        gap: 2em;
+        justify-content: space-around;
+
+        @media screen and (max-width: 400px) {
+          flex-direction: column;
+        }
+      }
+
+      & .link-box {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        margin-right: 1em;
+
+        & .link-heading {
+          color: #fff;
+          font-weight: 600;
+        }
+
+        & p {
+          width: fit-content;
+          min-width: min-content;
+          max-width: 200px;
+          color: #ccc;
+          font-size: 15px;
+          cursor: pointer;
+
+          &.link:hover {
+            color: #fff;
+          }
+        }
+
+        & .social-links {
+          width: 100%;
+          display: flex;
+          gap: 1.5em;
+
+          & img {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    & .go-top {
+      padding: 2em;
+      display: flex;
+      justify-content: flex-end;
+
+      @media screen and (max-width: 768px) {
+        justify-content: center;
+      }
+
+      & img {
+        transition: 0.3s ease;
+        -webkit-transition: 0.3s ease;
+        -moz-transition: 0.3s ease;
+        -ms-transition: 0.3s ease;
+        -o-transition: 0.3s ease;
+        &:hover {
+          transform: scale(1.03);
+          -webkit-transform: scale(1.03);
+          -moz-transform: scale(1.03);
+          -ms-transform: scale(1.03);
+          -o-transform: scale(1.03);
+}
+      }
+    }
+
+    & .copyright {
+      font-size: 15px;
+      font-weight: 600;
+      color: #ccc;
+
+      & > div {
+        margin-bottom: 7px;
+      }
+
+      & .copyright-link-box {
+        display: flex;
+        gap: 1em;
+        margin-bottom: 1em;
+
+        & .link:hover {
+          cursor: pointer;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

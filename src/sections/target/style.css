@@ -1,0 +1,57 @@
+.target-section {
+  margin-block: 15em 5em;
+  margin-inline: auto;
+  width: 100vw;
+  max-width: 1200px;
+
+  & h1 {
+    text-align: center;
+    margin-bottom: 2em;
+  }
+
+  & .target-box {
+    padding-inline: 2em;
+    width: 100%;
+    display: grid;
+    grid-gap: 1.5em;
+    grid-template-columns: repeat(4, 1fr);
+    place-content: center;
+
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    & .target {
+      border-radius: 20px;
+      background-color: #f1e9fc;
+      padding: 2em;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1em;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      transition: 0.3s ease;
+      -webkit-transition: 0.3s ease;
+      -moz-transition: 0.3s ease;
+      -ms-transition: 0.3s ease;
+      -o-transition: 0.3s ease;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.02);
+        -webkit-transform: scale(1.02);
+        -moz-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+        -o-transform: scale(1.02);
+      }
+
+      & img {
+        height: 50px;
+      }
+    }
+  }
+}

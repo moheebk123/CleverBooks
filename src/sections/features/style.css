@@ -1,0 +1,92 @@
+.features-section {
+  background-color: #f2f2f2;
+  width: 100vw;
+  padding-block: 8em;
+
+  & .container {
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding: 1em;
+
+    & > h1 {
+      text-align: center;
+      margin-bottom: 1.5em;
+    }
+
+    & .slick-slider {
+      margin-inline: auto;
+      width: 90%;
+      height: max-content;
+
+      @media screen and (max-width: 768px) {
+        width: 80%;
+      }
+
+      & .feature {
+        background-color: #fff;
+        padding: 8em 3em;
+        margin-inline: 1em;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+        display: flex;
+        gap: 3em;
+        align-items: center;
+
+        @media screen and (max-width: 930px) {
+          flex-direction: column;
+        }
+
+        & .image {
+          width: 50%;
+          display: flex;
+          justify-content: center;
+
+          @media screen and (max-width: 930px) {
+            width: 100%;
+          }
+
+          & img {
+            width: 100%;
+            object-fit: contain;
+
+            @media screen and (max-width: 930px) {
+              width: 60%;
+            }
+          }
+        }
+
+        & .content {
+          width: 50%;
+
+          @media screen and (max-width: 930px) {
+            width: 100%;
+          }
+
+          & h2 {
+            font-size: 1.6em;
+            margin-bottom: 1em;
+          }
+        }
+      }
+
+      & .slick-arrow {
+
+        &.slick-prev img {
+          transform: rotate(180deg);
+          -webkit-transform: rotate(180deg);
+          -moz-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+          -o-transform: rotate(180deg);
+        }
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+}
